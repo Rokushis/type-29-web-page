@@ -1,0 +1,163 @@
+:root {
+  --main-color: rgb(19, 18, 18);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 350px;
+}
+main {
+  height: 80vh;
+  background-image: url(./assets/main\ photo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  min-height: 500px;
+}
+header {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.burger-btn {
+  all: unset;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.burger-btn img {
+  width: 100px;
+}
+
+header h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--main-color);
+}
+
+header nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+.primarry-btn {
+  padding: 0.8rem 1.6rem;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+}
+
+.oposite_btn {
+  background-color: white;
+  color: var(--main-color);
+}
+
+.heading {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.heading h1 {
+  font-size: 2.4rem;
+}
+.heading button {
+  align-self: flex-start;
+}
+
+.mission {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 4rem 2rem;
+  background-color: rgba(240, 255, 255, 0.822);
+  gap: 3rem;
+}
+
+.mission .problem {
+  font-size: 2.2rem;
+}
+
+.mission .main-mission {
+  font-size: 1.6rem;
+}
+.about-1 .text-content button {
+  align-self: flex-start;
+  cursor: pointer;
+}
+.about-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 4rem 2rem;
+  height: 500px;
+  gap: 2rem;
+}
+.about-1 .img-content img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.about-1 .img-content {
+  display: flex;
+  align-items: center;
+}
+.about-1 .text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about-1 .text-content h2 {
+  font-size: 2rem;
+}
+.about-1 .text-content p {
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  header nav {
+    display: none;
+  }
+
+  .burger-btn {
+    display: inline-block;
+  }
+  .heading {
+    width: 75%;
+  }
+  .heading h1 {
+    font-size: 1.8rem;
+  }
+  .mission {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .about-1 {
+    grid-template-columns: 1fr;
+  }
+  .about-1 .img-content img {
+    height: 300px;
+  }
+}
